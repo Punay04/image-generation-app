@@ -4,7 +4,7 @@ import {
   GenerateImageSchema,
   GenerateImagesFromPackSchema,
 } from "common/types";
-import {prismaClient} from "db"
+import { prismaClient } from "db";
 
 const port = process.env.PORT || 8080;
 
@@ -21,7 +21,7 @@ app.post("/ai/training", async (req, res) => {
     return;
   }
 
-  await prismaClient.model.create({
+  const data = await prismaClient.model.create({
     data: {
       name: parsedBody.data.name,
       type: parsedBody.data.type,
@@ -30,6 +30,11 @@ app.post("/ai/training", async (req, res) => {
       eyeColor: parsedBody.data.eyecolor,
       bald: parsedBody.data.bald,
     },
+  });
+
+  res.json({
+    message: "Model training started",
+    modelId: data.id,
   });
 });
 
