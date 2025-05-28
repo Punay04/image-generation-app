@@ -24,13 +24,6 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false,
-
-    // Path aliases
-    "baseUrl": ".",
-    "paths": {
-      "db": ["packages/db"],
-      "common/*": ["packages/common/*"]
-    }
+    "noPropertyAccessFromIndexSignature": false
   }
 }
