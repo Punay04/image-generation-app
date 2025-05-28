@@ -133,7 +133,8 @@ exports.Prisma.ModelScalarFieldEnum = {
   age: 'age',
   ethinicity: 'ethinicity',
   eyeColor: 'eyeColor',
-  bald: 'bald'
+  bald: 'bald',
+  userId: 'userId'
 };
 
 exports.Prisma.TrainingImagesScalarFieldEnum = {
@@ -147,6 +148,8 @@ exports.Prisma.OutputImageScalarFieldEnum = {
   imageUrl: 'imageUrl',
   modelId: 'modelId',
   userId: 'userId',
+  prompt: 'prompt',
+  status: 'status',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -199,6 +202,13 @@ exports.EyeColorEnum = exports.$Enums.EyeColorEnum = {
   Gray: 'Gray',
   Green: 'Green',
   Hazel: 'Hazel'
+};
+
+exports.StatusEnum = exports.$Enums.StatusEnum = {
+  Pending: 'Pending',
+  Processing: 'Processing',
+  Completed: 'Completed',
+  Failed: 'Failed'
 };
 
 exports.Prisma.ModelName = {
