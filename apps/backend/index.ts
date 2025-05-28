@@ -23,16 +23,14 @@ app.post("/ai/training", async (req, res) => {
 
   await prismaClient.model.create({
     data: {
-      name : parsedBody.data.name,
-      type : parsedBody.data.type,
-      age : parsedBody.data.age,
-      ethinicity : parsedBody.data.ethinicity,
-      eyeColor : parsedBody.data.eyecolor,
-      bald : parsedBody.data.bald,
-      images: {
-        
-      }
-  })
+      name: parsedBody.data.name,
+      type: parsedBody.data.type,
+      age: parsedBody.data.age,
+      ethinicity: parsedBody.data.ethinicity,
+      eyeColor: parsedBody.data.eyecolor,
+      bald: parsedBody.data.bald,
+    },
+  });
 });
 
 app.post("/ai/generate", (req, res) => {});
